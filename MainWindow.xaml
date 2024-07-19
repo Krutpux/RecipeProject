@@ -1,0 +1,51 @@
+﻿<Window x:Class="RecipeProekt.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RecipeProekt"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel RenderTransformOrigin="0.5,0.5">
+            <Label Content="Recipe Name" Width="68" Height="23" FontSize="10" HorizontalAlignment="Left"/>
+            <TextBox x:Name="RecipeNameTextBox"
+                     Margin="10"/>
+            <Label Content="The Recipe" Width="58" HorizontalAlignment="Left" FontSize="10" RenderTransformOrigin="0.5,0.5" Height="23">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.075"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <TextBox x:Name="TheRecipeTextBox"
+                     Margin="10"/>
+            <Button 
+                   
+                    Content="Add Recipe"
+                    Click="AddRecipe_Click"
+                    Margin="10"/>
+            <ComboBox 
+                Name="RecipeComboBox"
+                Width="120">
+            </ComboBox>
+
+            <Button
+                     Content="Remove Recipe"
+                     Click="RemoveRecipe_Click"
+                         Margin="10"/>
+            <Button 
+                    Content="Edit Recipe"
+                    Click="EditRecipe_Click"
+                    Margin="10"/>
+
+            <ListBox 
+                Name="RecipeListBox"
+                Margin="10"/>
+
+        </StackPanel>
+    </Grid>
+</Window>
